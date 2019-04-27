@@ -1,0 +1,14 @@
+.container{
+	padding: 80px;
+    width: 715px;
+}
+
+.contain {
+	display: flex; 
+	flex-direction: column;
+}
+
+.disableLine {
+	text-Decoration: none;
+}
+

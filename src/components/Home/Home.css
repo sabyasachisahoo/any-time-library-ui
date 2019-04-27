@@ -1,0 +1,14 @@
+.center{
+   position: absolute;
+   top: 50%;
+   left: 35%;
+   width: auto;
+   height: auto;  
+}
+
+@media (max-width: 768px) {
+    .center {
+        font-size: 15px;
+        left: 25%;
+    }
+}

@@ -1,0 +1,65 @@
+.searchbar input[type=text] {
+    padding: 5px;
+    font-size: 19px;
+    border: solid turquoise;
+    float: left;
+    width: 300%;
+    background: #f1f1f1;
+  }
+  
+  /* .searchbar button[type="submit"] {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 12px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+} 
+
+.searchbar button:hover {
+  background: #0b7dda;
+} */
+
+.contain{
+	padding: 14px;
+	display: inline;
+}
+.card {
+	width: 150px;
+    text-align: center;
+    background:lightskyblue;
+    border-radius: 4px;
+}
+
+.box {
+	display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.box h3 {
+	font-size: 1em;
+}
+.box p {
+    margin-top: 3px;
+	font-size: .8em;
+}
+
+.libBtn{
+	background-color:royalblue;
+	color: white;
+	padding: 7px 10px;
+	margin: 4px 0;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+}
+
+.libBtn:hover{
+	opacity: 0.8;
+}
