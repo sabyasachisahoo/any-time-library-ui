@@ -53,16 +53,11 @@ class SearchBook extends Component{
 
     render(){
         return(
-            <div className="searchbar">
-                <form>
-                    <input type="text" 
-                           className="form-control" 
-                           placeholder="Search by Title"
-                            ref={input => this.search = input}
-                            onChange={this.searchHandler} />
-                </form>
-            </div>
-             
+            <form className="searchbar">
+                <input type="text" placeholder="Search by Title"
+                        ref={input => this.search = input}
+                        onChange={this.searchHandler} />
+            </form>
         )
     }
 }

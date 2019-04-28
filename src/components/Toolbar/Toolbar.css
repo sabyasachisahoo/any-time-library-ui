@@ -17,6 +17,7 @@
     text-Decoration: none;
     font-size: 20px;
     color: white;
+    text-transform: uppercase;
     }
    
   .spacer {
@@ -52,14 +53,12 @@
     }
     .toolbar_header {
        margin-left: 40px;
+       font-weight: 500;
     }
   }
   
-  /* @media (min-width: 769px) {
+   @media (min-width: 769px) {
     .toolbar__toggle-button {
       display: none;
     }
-    toolbar_header {
-       margin-left: 0px;
-    }
-  } */
+  } 

@@ -51,17 +51,14 @@ class Login extends Component {
     render(){
         const { username, password } = this.state;
         return (
-                <form onSubmit={this.onSubmit}>
-                      <div className="container">
-                        <h2>Login</h2>
-                          <input type="text" className="form-control" placeholder="Username" name="username" value={username} onChange={this.onChange} required/>
-                          <input type="password" className="form-control" placeholder="Password" name="password" value={password} onChange={this.onChange} required/>
-                          <button className="btn btn-sm btn-primary btn-block" type="submit">Login</button>
-                      
-                        <p>
-                          <Link to="/register" style={{textDecoration:"none"}}>Not a member? </Link>
-                        </p>
-                      </div>
+                <form className="box" onSubmit={this.onSubmit}>
+                    <h1>Login</h1>
+                    <input type="text" placeholder="Username" name="username" value={username} onChange={this.onChange} required/>
+                    <input type="password" placeholder="Password" name="password" value={password} onChange={this.onChange} required/>
+                    <button type="submit">Login</button>
+                    <p>
+                      <Link to="/register" style={{textDecoration:"none",color:"#3498db"}}>Not a member? </Link>
+                    </p>
                   </form>    
         )
     }

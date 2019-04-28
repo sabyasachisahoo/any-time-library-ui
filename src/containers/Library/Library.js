@@ -90,11 +90,11 @@ class Library extends Component {
   
     return (
       <div className="container">
-          <h3> BOOK CATALOG </h3>  
-        <div className="contain">
-              {  (token && role === 'ADMIN') ? <Link className="disableLine" to='/admin/addbooks'>Add books</Link> :null   } 
+          <h1> BOOKS CATALOG </h1>  
+           {  (token && role === 'ADMIN') ? <Link className="disableLine" to='/admin/addbooks'>Add books</Link> :null   } 
               <SearchBook callbackFromParent={this.myCallback}/>
-              <Table striped bordered hover responsive variant="dark">
+        <div className="contain">
+              <Table responsive variant="dark">
               <thead>
                 <tr>
                   <th>Title</th>
@@ -115,7 +115,7 @@ class Library extends Component {
                     <td>{book.category}</td>
                     <td>{
                         (token && role === 'USER') ? 
-                          <span><button className="libBtn"
+                          <span><button
                               onClick={() => this.issueBookHandler(book._id,book.title,book.author)}>Issue</button>
                           </span>
                         :null
@@ -124,7 +124,7 @@ class Library extends Component {
                     <td>
                         {
                         (token && role === 'ADMIN') ? 
-                        <span><button className="libBtn"
+                        <span><button 
                               onClick={() => this.deleteBookHandler(book._id)}>Delete</button>
                         </span>
                         :null

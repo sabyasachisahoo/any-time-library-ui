@@ -29,11 +29,11 @@ class Register extends Component {
     const { username, password } = this.state;
         return (
                 <form onSubmit={this.onSubmit}>
-                    <div className="container">
-                        <h2>Register</h2>
-                        <input type="text" className="form-control" placeholder="Username" name="username" value={username} onChange={this.onChange} required/>
-                        <input type="password" className="form-control" placeholder="Password" name="password" value={password} onChange={this.onChange} required/>
-                        <button className="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                    <div className="box">
+                        <h1>Register</h1>
+                        <input type="text" placeholder="Username" name="username" value={username} onChange={this.onChange} required/>
+                        <input type="password" placeholder="Password" name="password" value={password} onChange={this.onChange} required/>
+                        <button type="submit">Register</button>
                     </div>
                 </form>
         )

@@ -102,7 +102,7 @@ class IssueBook extends Component {
 
     //renew book in issued book list
   renewIssuedBook(id, renew_date) {
-    return axios.put(`/issuedbooks/${id}`,renew_date)
+    return axios.put(`https://cors-anywhere.herokuapp.com/issuedbooks/${id}`,renew_date )
       .then(res => {
         if(res.data && this.getRole() === 'USER') {
            this.setState({ userbooks: res.data });
@@ -122,7 +122,7 @@ class IssueBook extends Component {
 
   //remove book from issued list
   returnIssuedBook(id) {
-    return axios.delete('/issuedbooks/'+id)
+    return axios.delete('/issuedbooks/'+id )
       .then(res => {
          if(res.data && this.getRole() === 'USER') {
            this.setState({ userbooks: res.data });
@@ -163,9 +163,9 @@ class IssueBook extends Component {
        <div className="container">
        <div className="panel panel-default">
          <div className="panel-heading">
-           <h3 className="panel-title">
+           <h1>
              ALL ISSUED BOOK CATALOG
-           </h3>
+           </h1>
          </div>
          <div className="panel-body">
            <div className="contain">
@@ -206,9 +206,9 @@ class IssueBook extends Component {
        <div className="container">
       <div className="panel panel-default">
         <div className="panel-heading">
-          <h3 className="panel-title">
+          <h1 className="panel-title">
             ISSUED BOOK CATALOG 
-          </h3>
+          </h1>
         </div>
         <div className="panel-body">
           <div className="contain">

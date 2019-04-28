@@ -1,14 +1,26 @@
 .container{
-	padding: 80px;
-    width: 715px;
+	padding: 80px 80px;
 }
 
 .contain {
 	display: flex; 
-	flex-direction: column;
+	flex-direction: column; 
 }
 
 .disableLine {
 	text-Decoration: none;
 }
+
+.searchbar input[type=text] {
+  left: 60px;
+  width: 230px;
+  padding: 14px 12px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.searchbar input[type=text]:focus {
+  width: 100%;
+}
+
 
