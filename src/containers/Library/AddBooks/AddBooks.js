@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from '../../../axios';
+import './AddBooks.css';
 
 class AddBooks extends Component {
     state ={
@@ -42,16 +43,16 @@ class AddBooks extends Component {
       }
     render(){
         return(
-            <div className="container">
+            <div className="addBookbox">
             <form className="form-horizontal" onSubmit={this.onSubmit}>
                 <h2 className="form-signin-heading">Add books</h2>
-                <div className="form-group">
+                <div>
                     <label htmlFor="inputISBN" className="control-label"></label>
-                    <input type="text" className="form-control" placeholder="ISBN" name="isbn" value={this.state.isbn} onChange={this.onChange} required/>
+                    <input type="text" placeholder="ISBN" name="isbn" value={this.state.isbn} onChange={this.onChange} required/>
                 </div>
-                <div className="form-group">
+                <div>
                     <label htmlFor="inputTitle" className="control-label"></label>
-                    <input type="text" className="form-control" placeholder="Title" name="title" value={this.state.title} onChange={this.onChange} required/>
+                    <input type="text" placeholder="Title" name="title" value={this.state.title} onChange={this.onChange} required/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="inputAuthor" className="control-label"></label>
@@ -77,8 +78,8 @@ class AddBooks extends Component {
                     <label htmlFor="inputCategory" className="control-label"></label>
                     <input type="text" className="form-control" placeholder="Category" name="category" value={this.state.category} onChange={this.onChange} required/>
                 </div>
-                <div style={{width: 360}} >
-                    <button type="submit">Add</button>
+                <div>
+                    <button type="submit">Add Book</button>
                 </div> 
             </form>
         </div>

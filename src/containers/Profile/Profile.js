@@ -1,7 +1,5 @@
 import React,{Component} from 'react';
 import axios from '../../axios';
-import {Link} from 'react-router-dom';
-//import ReactAux from '../../hoc/ReactAux';
 import './Profile.css';
 class Profile extends Component{
 
@@ -36,6 +34,30 @@ class Profile extends Component{
         // .catch((error) => {
         //   throw error;
         // });
+    }
+
+    updateUserHandler(id) {
+         axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
+
+        axios.put('/profile/'+id)
+        .then(res => {
+          this.setState({ users: res.data });
+        })
+        .catch((error) => {
+          throw error;
+        });
+    }
+
+    removeUserHandler(id) {
+         axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
+
+        axios.delete('/profile/'+id)
+        .then(res => {
+          this.setState({ users: res.data });
+        })
+        .catch((error) => {
+          throw error;
+        });
     }
 
     render(){
@@ -76,7 +98,8 @@ class Profile extends Component{
                                         <tr key={user._id}>
                                             <td>{user.username}</td>
                                             <td>{user.role}</td>
-                                            <td><Link to='/edit'>Edit</Link>|<Link to='/delete'>Delete</Link></td>
+                                            <td><button onClick={() => this.updateUserHandler(user._id)}>Edit</button></td>
+                                            <td><button onClick={() => this.removeUserHandler(user._id)}>Delete</button></td>
                                         </tr>
                                     )}
                                 </tbody>
