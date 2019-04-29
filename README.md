@@ -4,6 +4,10 @@ A responsive web app, written in React.js,
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+<img src="src/assets/images/atl_login.png"/>
+<img src="src/assets/images/atl_books_search.png"/>
+<img src="src/assets/images/atl_issued_books.png"/>
+
 ## Folder Structure
 
 After creation, your project should look like this:
